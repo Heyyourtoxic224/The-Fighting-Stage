@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fighting Stage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Creature Panel</h2>
+            <div id="creaturePanel"></div>
+        </div>
+        <div class="battle-stage" id="battleStage" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Battle Stage</h2>
+        </div>
+        <div class="initiative-tracker">
+            <h2>Initiative Tracker</h2>
+            <div id="initiativeTracker">
+                <div class="initiative-entry">
+                    <label>Angel: <input type="number" id="initiativeAngel"></label>
+                    <label>Naly: <input type="number" id="initiativeNaly"></label>
+                    <label>JD: <input type="number" id="initiativeJD"></label>
+                    <label>Roxy: <input type="number" id="initiativeRoxy"></label>
+                    <label>Creatures: <input type="number" id="initiativeCreatures"></label>
+                    <button onclick="sortInitiative()">Sort Initiative</button>
+                </div>
+                <h3>Order of Initiative</h3>
+                <ul id="initiativeOrder"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
